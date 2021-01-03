@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol ChangeTextDelegate {
-    func changeText()
+protocol ChangeUIDelegate {
+    func changeUI()
 }
 
 class SecondViewController: UIViewController {
     
-    var delegate: ChangeTextDelegate?
+    var delegate: ChangeUIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func clickButtonTapped(_ sender: UIButton) {
-        self.delegate?.changeText()
+        self.delegate?.changeUI()
         self.dismiss(animated: true, completion: nil)
     }
 }

@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func buttonTapped(_ sender: UIButton) {
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
         
         vc.modalTransitionStyle = .coverVertical
@@ -24,4 +24,3 @@ class FirstViewController: UIViewController {
     }
     
 }
-
