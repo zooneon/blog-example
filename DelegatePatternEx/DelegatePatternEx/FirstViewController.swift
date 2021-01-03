@@ -20,7 +20,16 @@ class FirstViewController: UIViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
         
         vc.modalTransitionStyle = .coverVertical
+        vc.delegate = self
         self.present(vc, animated: true, completion: nil)
+    }
+    
+}
+
+extension FirstViewController: ChangeUIDelegate {
+    func changeUI() {
+        self.textLabel.text = "UI가 변경되었습니다."
+        self.view.backgroundColor = .systemTeal
     }
     
 }

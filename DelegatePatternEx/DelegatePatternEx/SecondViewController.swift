@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol ChangeUIDelegate {
+protocol ChangeUIDelegate: class {
     func changeUI()
 }
 
 class SecondViewController: UIViewController {
     
-    var delegate: ChangeUIDelegate?
+    weak var delegate: ChangeUIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
