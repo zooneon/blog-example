@@ -104,6 +104,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Click"/>
+                                <connections>
+                                    <action selector="clickButtonTapped:" destination="PUm-Rq-2qf" eventType="touchUpInside" id="N6K-j5-mUx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7zP-3U-4Kq"/>
