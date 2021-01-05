@@ -1,38 +1,58 @@
 // 실생활 예제
 
-protocol PrepareParty {
-    func prepareFood(_ foodName: String)
-    func prepareSong(_ songName: String)
+protocol PrepareParty: class {
+    func prepareFood()
+    func prepareSong()
 }
 
 class PartyDirector {
-    var delegate: PrepareParty?
+    weak var delegate: PrepareParty?
     
-    func order(foodName: String, songName: String) {
-        self.delegate?.prepareFood(foodName)
-        self.delegate?.prepareSong(songName)
+    func order() {
+        self.delegate?.prepareFood()
+        self.delegate?.prepareSong()
     }
 }
 
-struct PartyWorker: PrepareParty {
+class FirstPartyWorker: PrepareParty {
     init(director: PartyDirector) {
         director.delegate = self
     }
     
-    func prepareFood(_ foodName: String) {
-        print("I prepared food which name is \(foodName)")
+    func prepareFood() {
+        print("First worker prepared pizza")
     }
     
-    func prepareSong(_ songName: String) {
-        print("I prepared song which name is \(songName)")
+    func prepareSong() {
+        print("First worker prepared BTS - Dynamite")
     }
     
 }
 
-let director = PartyDirector()
-let worker = PartyWorker(director: director)
+class SecondPartyWorker: PrepareParty {
+    init(director: PartyDirector) {
+        director.delegate = self
+    }
+    
+    func prepareFood() {
+        print("Second worker prepared sushi")
+    }
+    
+    func prepareSong() {
+        print("Second worker prepared keshi - always")
+    }
+}
 
-director.order(foodName: "곱창", songName: "테스형")
+let zooneon = PartyDirector()
 
-//I prepared food which name is 곱창
-//I prepared song which name is 테스형
+let son = FirstPartyWorker(director: zooneon)
+zooneon.order()
+//First worker prepared pizza
+//First worker prepared BTS - Dynamite
+
+let cho = SecondPartyWorker(director: zooneon)
+zooneon.order()
+//Second worker prepared sushi
+//Second worker prepared keshi - always
+
+
