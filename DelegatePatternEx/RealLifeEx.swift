@@ -1,3 +1,8 @@
+//
+//  RealLifeEx.swift
+//
+//  Created by 권준원 on 2021/01/07.
+//
 // 실생활 예제
 
 protocol PrepareParty: class {
@@ -54,5 +59,3 @@ let cho = SecondPartyWorker(director: zooneon)
 zooneon.order()
 //Second worker prepared sushi
 //Second worker prepared keshi - always
-
-
