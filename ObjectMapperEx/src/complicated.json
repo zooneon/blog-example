@@ -1,0 +1,16 @@
+{
+  "name": "zooneon",
+  "age": 25,
+  "address": "seoul",
+  "contact": {
+    "phone_number": "0102222",
+    "email": "foo@google.com"
+  },
+  "job": {
+    "working": true,
+    "workplace": {
+      "name": "Sejong Univ.",
+      "position": "student"
+    }
+  }
+}
