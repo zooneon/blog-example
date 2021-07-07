@@ -3,7 +3,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.InnerClassPersonDto;
-import dto.PersonDto;
+import dto.person.PersonDto;
 
 import java.io.File;
 import java.io.IOException;
@@ -85,6 +85,17 @@ public class ObjectMapperEx {
             System.out.println(innerClassPersonDto.getName());
             System.out.println(innerClassPersonDto.getContact().getPhoneNumber());
             System.out.println(innerClassPersonDto.getJob().getWorkplace().getName());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        // fourth try
+        try {
+            PersonDto personDto = objectMapper.readValue(complicatedJson, PersonDto.class);
+            System.out.println(personDto);
+            System.out.println(personDto.getName());
+            System.out.println(personDto.getContact().getPhoneNumber());
+            System.out.println(personDto.getJob().getWorkplace().getName());
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }

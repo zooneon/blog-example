@@ -1,4 +1,4 @@
-package dto;
+package dto.person;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

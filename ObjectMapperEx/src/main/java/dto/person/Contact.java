@@ -1,4 +1,4 @@
-package dto;
+package dto.person;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

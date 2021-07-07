@@ -1,4 +1,4 @@
-package dto;
+package dto.person;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,8 +7,9 @@ import lombok.ToString;
 @ToString
 @Getter
 @NoArgsConstructor
-public class Workplace {
+public class PersonDto {
 
     private String name;
-    private String position;
+    private Contact contact;
+    private Job job;
 }
