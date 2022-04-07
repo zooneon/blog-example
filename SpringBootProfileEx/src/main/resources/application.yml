@@ -1,0 +1,48 @@
+#application.yml
+spring:
+  profiles:
+#    include: database
+    active: prod
+    group:
+      prod: zooneon, prod-db
+      test: zooneon, test-db
+me:
+  nickname: zooneon
+  age: 26
+  github: https://github.com/zooneon
+
+---
+spring:
+#  InactiveConfigDataAccessException
+#  profiles:
+#    group:
+#      prod: zooneon, prod-db
+#      test: zooneon, test-db
+  config:
+    activate:
+      on-profile: test2
+me:
+  nickname: zzzooneon
+  age: 50
+db:
+  username: test2-user
+  password: test2-user
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod-db
+db:
+  username: prod-user
+  password: qwerty!@
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test-db
+db:
+  username: test-user
+  password: 1234
+

@@ -1,0 +1,7 @@
+#application-prod.yml
+spring:
+  config:
+    import: optional:classpath:zooneon.yml
+
+
+

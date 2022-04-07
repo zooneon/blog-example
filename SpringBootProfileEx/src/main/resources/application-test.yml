@@ -1,0 +1,6 @@
+#application-test.yml
+spring:
+  config:
+    import: optional:classpath:zooneon.yml
+
+

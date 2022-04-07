@@ -1,0 +1,23 @@
+#application-zooneon.yml
+#spring.profiles deprecated
+me:
+  nickname: zooneon
+  age: 26
+  univ: Sejong University
+  major: Computer Engineering
+
+---
+spring.profiles: test
+me:
+  nickname: zzzooneon
+  age: 19
+  univ: Not attending
+  major: None
+
+---
+spring.profiles: prod
+me:
+  nickname: junwon
+  age: 27
+  univ: Graduate
+  major: Computer Engineering

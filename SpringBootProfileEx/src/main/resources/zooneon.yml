@@ -1,0 +1,22 @@
+#zooneon.yml
+me:
+  nickname: zooneon
+  age: 26
+  univ: Sejong University
+  major: Computer Engineering
+
+---
+spring.config.activate.on-profile: test
+me:
+  nickname: zzzooneon
+  age: 19
+  univ: Not attending
+  major: None
+  github: https://github.com/zooneon
+
+---
+spring.config.activate.on-profile: prod
+me:
+  nickname: junwon
+  age: 27
+  univ: Graduate

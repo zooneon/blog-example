@@ -1,0 +1,13 @@
+#application-database.yml
+db:
+  username: root
+  password: 1234
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+db:
+  username: prod-user
+  password: qwerty!@
